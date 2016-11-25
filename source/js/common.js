@@ -1,3 +1,6 @@
+$(document).ready(function () {
+    svg4everybody({});
+});
 var myModule = (function () {
 
     var init = function () {

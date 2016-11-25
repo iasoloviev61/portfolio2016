@@ -2,12 +2,12 @@ extends ../layout/login_layout.pug
 block title
 	title Добро пожаловать
 block content
-	mixin icon(name,mod)
-		- mod = mod || ''
-		svg(class="icon icon-" + name + ' ' + mod)
-			use(xlink:href="assets/img/sprite.svg#" + name)
-	div.auth_button
-		a(class='auth__button-kunk' href="#") Авторизоваться
+	//mixin icon(name,mod)
+	//	- mod = mod || ''
+	//	svg(class="icon icon-" + name + ' ' + mod)
+	//		use(xlink:href="assets/img/sprite.svg#" + name)
+	div.auth-button
+		a(class='auth-button__link' href="admin.html") Авторизоваться
 	div.auth
 		div.auth-user
 			div.auth-user__photo
@@ -31,3 +31,39 @@ block content
 								+icon('in','red_mod')
 
 		div.auth-menu
+			nav.auth-menu__nav
+				ul.auth-menu__list
+					li.auth-menu__item
+						a(class='auth-menu__link' href="my_work.html") Мои работы
+					li.auth-menu__item
+						a(class='auth-menu__link' href="aboutme.html") Обо мне
+					li.auth-menu__item
+						a(class='auth-menu__link' href="blog.html") Блог
+	div.auth-popup
+		div.auth-popup__title
+		form.auth-form
+			div.auth-form__login
+				label.auth-label__login
+					span.auth-input__login_icon
+					input(class="auth-input__login-name" type="text" name="login" placeholder="Логин")
+			div.auth-form__password
+				laleb.auth-label__password
+					span.auth-input__password_icon
+					input(class="auth-input__password" type="password" name="pasword" placeholder="Пароль")
+			div.auth-form__checkbox
+				label.auth-label__checkbox
+					input(class="auth-input__checkbox" type="checkbox" name="notrobot")
+					div.auth-input__checkbox_fake
+					div.auth-input__checkbox_title Я человек
+			div.auth-form__radio
+				div.auth-form__radio_title Вы точно не робот?
+				label.auth-label__radio
+					input(class="auth-input__radio" type="radio" name="input-radio" value="yes")
+					div.auth-input__radio_fake
+					div.auth-inout__radio_title Да
+				label.auth-label__radio
+					input(class="auth-input__radio" type="radio" name="input-radio" value="no")
+					div.auth-input__radio_fake
+					div.auth-inout__radio_title Не уверен
+
+
