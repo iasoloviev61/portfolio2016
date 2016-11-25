@@ -2,5 +2,32 @@ extends ../layout/login_layout.pug
 block title
 	title Добро пожаловать
 block content
-	h1 kfkfk
-	p dlkfgjdslfgj
+	mixin icon(name,mod)
+		- mod = mod || ''
+		svg(class="icon icon-" + name + ' ' + mod)
+			use(xlink:href="assets/img/sprite.svg#" + name)
+	div.auth_button
+		a(class='auth__button-kunk' href="#") Авторизоваться
+	div.auth
+		div.auth-user
+			div.auth-user__photo
+				img(src="#" alt="my photo")
+			div.auth-user__desc
+				div.auth-user__name Соловьёв Игорь
+				div.auth-user__text Личный сайт веб разработчика
+				div.auth-user__social
+					ul.social-list
+						li.social__item
+							a(class='social__link' href='https://vk.com' target=_blank)
+								span Вконтакте
+								+icon('vk','red_mod')
+						li.social__item
+							a(class='social__link' href='https://github.com' target=_blank)
+								span git
+								+icon('github','red_mod')
+						li.social__item
+							a(class='social__link' href='https://linkedin.com' target=_blank)
+								span Линкедин
+								+icon('in','red_mod')
+
+		div.auth-menu

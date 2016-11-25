@@ -8,6 +8,9 @@ module.exports = function() {
       .pipe($.gp.autoprefixer({ browsers: $.config.autoprefixerConfig }))
       .pipe($.gp.sourcemaps.write())
       .pipe($.gulp.dest($.config.root + '/assets/css'))
+      // .pipe($.gp.csso())
+      // .pipe($.gp.rename("main.min.css"))
+      // .pipe($.gulp.dest($.config.root + '/assets/css'))
       .pipe($.browserSync.stream());
   })
 };
