@@ -2,4 +2,27 @@ extends ../layout/main_layout.pug
 block title
 	title Обо мне
 block content
-	h1 Обо мне
+	section.welcome
+		div.user-desc
+			div.user__photo
+				img(class="user__photo-img" src="assets/img/content/main-foto.jpg")
+			div.user__name Соловьёв Игорь
+			div.user__text Личный сайт веб-разработчика
+		div.arrow-dropdown
+			a(class="arrow-dropdown__link")
+	section.section.aboutme
+		div.vita
+			div.common-title.vita__title_top
+				h1 Обо мне
+			div.vita__photo
+				img(class="vita__photo-img" src="assets/img/content/main-foto.jpg")
+			div.vita__resume
+				div.common-title.vita__resume_title
+					h2 кто я
+				div.vita__resume_text
+					p.
+						Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+						Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+		div.experience
+			div.
+	section.sectio.contacts

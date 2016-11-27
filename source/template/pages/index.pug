@@ -2,10 +2,6 @@ extends ../layout/login_layout.pug
 block title
 	title Добро пожаловать
 block content
-	//mixin icon(name,mod)
-	//	- mod = mod || ''
-	//	svg(class="icon icon-" + name + ' ' + mod)
-	//		use(xlink:href="assets/img/sprite.svg#" + name)
 	div.auth-button
 		a(class='auth-button__link' href="admin.html") Авторизоваться
 	div.auth
@@ -30,7 +26,6 @@ block content
 								span Линкедин
 								+icon('in','red_mod')
 
-		div.auth-menu
 			nav.auth-menu__nav
 				ul.auth-menu__list
 					li.auth-menu__item
@@ -40,7 +35,7 @@ block content
 					li.auth-menu__item
 						a(class='auth-menu__link' href="blog.html") Блог
 	div.auth-popup
-		div.auth-popup__title
+		div.common-title.auth-popup__title Авторизуйтесь
 		form.auth-form
 			div.auth-form__login
 				label.auth-label__login
@@ -65,5 +60,10 @@ block content
 					input(class="auth-input__radio" type="radio" name="input-radio" value="no")
 					div.auth-input__radio_fake
 					div.auth-inout__radio_title Не уверен
-
+		nav.auth-menu__nav
+			ul.auth-menu__list
+				li.auth-menu__item
+					a(class='auth-menu__link' id="return" href="#") На главную
+				li.auth-menu__item
+					a(class='auth-menu__link' id="login" href="#") Войти
 

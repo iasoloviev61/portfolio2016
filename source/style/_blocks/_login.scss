@@ -1,10 +1,12 @@
+.wrapper-auth {
+  background: url("../img/bg/mountan.png") no-repeat;
+  @include cover();
+}
+//
 //.icon-vk {
-//  font-size: 10rem;
+//  font-size: 5rem;
 //  &.red_mod {
 //    color:red;
 //  }
 //}
-//
-////.social__link {
-////  display: block;
-////}
+
