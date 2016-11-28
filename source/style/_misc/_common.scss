@@ -1,5 +1,4 @@
-$container-width : 1100;
-$container-big-width : 1140;
+$container-width : 1180;
 
 // styles
 html, body {
@@ -12,40 +11,34 @@ body {
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   position: relative;
-  font-family: 'arial';
-  color: #000;
+  font-family: $rregular;
+  color: $grey;
    }
 
 img {
   width: 100%;
   height: auto;
 }
-.container {
-  margin: 0 auto;
-  position: relative;
-  width: 1100px;
-  @include clearfix;
-}
-.container-big {
-  margin: 0 auto;
-  position: relative;
-  width: 1140px;
-  @include clearfix;
-}
-
 .wrapper {
   position: relative;
   overflow: hidden;
   min-width: $container-width + 20px;
   width: 100%;
   min-height: 100%;
-    &:after {
-      content: "";
-      display: block;
-      height: 50px;
   }
-    }
-
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 1140px;
+  @include clearfix;
+}
+.container-big {
+  margin: 0 auto;
+  position: relative;
+  width: 1180px;
+  @include clearfix;
+  height: 100%;
+  }
 .maincontent {
   height: 100%;
 }
@@ -84,4 +77,68 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+.social__list {
+  display: flex;
+  justify-content: center;
+}
+.social__item:nth-of-type(1n+2) {
+  margin-left: 20px;
+}
+.social__link {
+
+}
+.common-title {
+  font-family: $bregular;
+  color: $grey-dark;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  font-size: 63px;
+  position: relative;
+  width: 240px;
+  text-align: center;
+  &:before, &:after {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 5px;
+    background: $grey-light;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  &:before {
+    right: 100%;
+  }
+  &:after {
+    left: 100%;
+  }
+}
+
+.common-subtitle {
+  font-family: $bregular;
+  color: $grey-dark;
+  margin-bottom:40px;
+  font-size: 35px;
+  position: relative;
+  width: 240px;
+  text-align: center;
+  &:before, &:after {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 5px;
+    background: $grey-light;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    }
+  &:before {
+    right: 100%;
+    }
+  &:after {
+    left: 100%;
+  }
+
 }

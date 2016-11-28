@@ -1,12 +1,130 @@
-.wrapper-auth {
+.start {
   background: url("../img/bg/mountan.png") no-repeat;
   @include cover();
+  height: 100vh;
+  min-height: 650px;
 }
-//
-//.icon-vk {
-//  font-size: 5rem;
-//  &.red_mod {
-//    color:red;
-//  }
-//}
 
+.start-content {
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+   &:after {
+    content: "";
+    display: block;
+    height: 50px;
+  }
+  }
+.auth-top {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 23px;
+  align-self: flex-start;
+  height: 70px;
+  }
+.auth-top__link {
+  display: block;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 26px;
+  width: 200px;
+  text-align: center;
+  &:hover {
+    background-color: #fff;
+    color: #00bfa5;
+  }
+}
+.auth-bottom {
+  display: flex;
+  height: 80vh;
+}
+.auth {
+  width: 380px;
+  height: 395px;
+  margin: auto;
+}
+.auth-user {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: rgb(252, 252, 252);
+  opacity: 0.851;
+  padding-top: 37px;
+}
+.auth-user__photo {
+  width: 145px;
+  height: 145px;
+  @include cover();
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  & img {
+    display: none;
+  }
+}
+
+.auth-user__name, .auth-user__text {
+  text-align: center;
+}
+.auth-user__name {
+  font-family: $rmedium;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.auth-user__text {
+  margin-bottom: 40px;
+}
+.icon-vk, .icon-github, .icon-in {
+  font-size: 1rem;
+  &.green_mod {
+    color:$green;
+    opacity: 0.8;
+   }
+}
+.auth-user__social {
+  padding-bottom: 40px;
+}
+.auth-menu__nav {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+    }
+.auth-menu__list {
+  display: table;
+  position: relative;
+  width: 100%;
+  }
+
+.auth-menu__item {
+  display: table-cell;
+  position: relative;
+  background-color: $green;
+  opacity: 0.851;
+  &:nth-of-type(1n+2) {
+    border-left: 2px solid rgba(222, 227, 231, 0.502);
+  }
+  &:hover {
+    background-color: $green-dark;
+  }
+}
+.auth-menu__link {
+  font-family: $rmedium;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align:center;
+  line-height: 50px;
+}
+
+
+
+.auth-popup {
+  display: none;
+}

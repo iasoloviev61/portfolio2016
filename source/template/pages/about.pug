@@ -3,13 +3,15 @@ block title
 	title Обо мне
 block content
 	section.welcome
-		div.user-desc
-			div.user__photo
-				img(class="user__photo-img" src="assets/img/content/main-foto.jpg")
-			div.user__name Соловьёв Игорь
-			div.user__text Личный сайт веб-разработчика
-		div.arrow-dropdown
-			a(class="arrow-dropdown__link")
+		include ../common/header
+		div.container
+			div.user-desc
+				div.user__photo
+					img(class="user__photo-img" src="assets/img/content/main-foto.jpg")
+				div.user__name Соловьёв Игорь
+				div.user__text Личный сайт веб-разработчика
+			div.arrow-dropdown
+				a(class="arrow-dropdown__link")
 	section.section.aboutme
 		div.vita
 			div.common-title.vita__title_top
@@ -17,12 +19,51 @@ block content
 			div.vita__photo
 				img(class="vita__photo-img" src="assets/img/content/main-foto.jpg")
 			div.vita__resume
-				div.common-title.vita__resume_title
+				div.common-subtitle.vita__resume_title
 					h2 кто я
 				div.vita__resume_text
 					p.
 						Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
 						Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
-		div.experience
-			div.
+		div.skill
+			div.common-subtitle.skill__title_top
+				h3 Чем я могу быть вам полезен
+			div.skill__text
+				p .Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+			div.skill-tech
+				div.tech-frontend
+					div.tech-frontend-title
+						h3 Frontend
+					ul.tech-frontend__list
+						li.tech-frontend__item
+							span.tech-frontend__name HTML5
+						li.tech-frontend__item
+							span.tech-frontend__name CSS3
+						li.tech-frontend__item
+							span.tech-frontend__name JavaScript & JQuery
+				div.tech-backend
+					div.tech-backend-title
+						h3 Backend
+					ul.tech-backend__list
+						li.tech-backend__item
+							span.tech-backend__name PHP
+						li.tech-backend__item
+							span.tech-backend__name MySql
+						li.tech-backend__item
+							span.tech-backend__name NodeJS & npm
+						li.tech-backend__item
+							span.tech-backend__name Mongo.db
+				div.tech-workflow
+					div.tech-workflow-title
+						h3 Workflow
+					ul.tech-workflow__list
+						li.tech-workflow__item
+							span.tech-workflow__name Git
+						li.tech-workflow__item
+							span.tech-workflow__name Gulp
+						li.tech-workflow__item
+							span.tech-workflow__name Bower
+
+
+
 	section.sectio.contacts
