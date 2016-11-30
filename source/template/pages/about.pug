@@ -4,66 +4,129 @@ block title
 block content
 	section.welcome
 		include ../common/header
+		img(class="portfolio__header" src="assets/img/bg/portfolio_header.svg")
+
+		div.user-top
+			div.user-data
+				div(class='auth-user__photo' style='background-image: url("assets/img/content/main-foto.jpg")')
+					img(src="assets/img/content/main-foto.jpg" alt="my photo")
+				div.auth-user__desc
+					div.user__name Соловьёв Игорь
+					div.user__text Личный сайт веб разработчика
+		div.user-bottom
+			a(class="arrow-dropdown__link")
+				+icon('arrow_down', 'white__mod')
+			.triangle
+				svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle__svg")
+					polygon(class="traingle__left traingle__left_about" points="0,0   0,86   500.8,86   500.8,75.5")
+					polygon(class="traingle__right traingle__right_about" points="1000,0   1000,86   500,86   500,75.5")
+
+	section.vita
 		div.container
-			div.user-desc
-				div.user__photo
-					img(class="user__photo-img" src="assets/img/content/main-foto.jpg")
-				div.user__name Соловьёв Игорь
-				div.user__text Личный сайт веб-разработчика
-			div.arrow-dropdown
-				a(class="arrow-dropdown__link")
-	section.section.aboutme
-		div.vita
-			div.common-title.vita__title_top
-				h1 Обо мне
-			div.vita__photo
-				img(class="vita__photo-img" src="assets/img/content/main-foto.jpg")
-			div.vita__resume
-				div.common-subtitle.vita__resume_title
-					h2 кто я
-				div.vita__resume_text
-					p.
-						Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-						Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
-		div.skill
-			div.common-subtitle.skill__title_top
-				h3 Чем я могу быть вам полезен
-			div.skill__text
-				p .Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
-			div.skill-tech
-				div.tech-frontend
-					div.tech-frontend-title
-						h3 Frontend
-					ul.tech-frontend__list
-						li.tech-frontend__item
-							span.tech-frontend__name HTML5
-						li.tech-frontend__item
-							span.tech-frontend__name CSS3
-						li.tech-frontend__item
-							span.tech-frontend__name JavaScript & JQuery
-				div.tech-backend
-					div.tech-backend-title
-						h3 Backend
-					ul.tech-backend__list
-						li.tech-backend__item
-							span.tech-backend__name PHP
-						li.tech-backend__item
-							span.tech-backend__name MySql
-						li.tech-backend__item
-							span.tech-backend__name NodeJS & npm
-						li.tech-backend__item
-							span.tech-backend__name Mongo.db
-				div.tech-workflow
-					div.tech-workflow-title
-						h3 Workflow
-					ul.tech-workflow__list
-						li.tech-workflow__item
-							span.tech-workflow__name Git
-						li.tech-workflow__item
-							span.tech-workflow__name Gulp
-						li.tech-workflow__item
-							span.tech-workflow__name Bower
-
-
-
-	section.sectio.contacts
+			div.vita-inner
+				div.about
+					div.about__header
+						div.common-title.vita__title_top Обо мне
+							+icon('about_header','opacity__mod')
+					div.about__photo
+						img(class="vita__photo-img" src="assets/img/content/main-foto.jpg")
+					div.about__description
+						div.common-subtitle.common-subtitle_vita кто я
+					div.about__text
+						p.
+							Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+						p.
+							Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+				div.skill
+					div.skill__header
+						div.common-subtitle.skill__title_top Чем я могу быть вам полезен
+					div.skill__text
+						p.
+							Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+					div.skill-tech
+						div.tech-frontend
+							div.tech__title
+								h3 Frontend
+							ul.tech__list
+								li.tech__item
+									svg(width="110", height="110", class="tech__graph-svg")
+										circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+										circle(r="45", cx="50%", cy="50%", stroke="#00bfa5", class="tech__graph-fill")
+									span.tech__name HTML5
+								li.tech__item
+									svg(width="110", height="110", class="tech__graph-svg")
+										circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+										circle(r="45", cx="50%", cy="50%", stroke="#00bfa5", class="tech__graph-fill")
+									span.tech__name CSS3
+								li.tech__item
+									svg(width="110", height="110", class="tech__graph-svg")
+										circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+										circle(r="45", cx="50%", cy="50%", stroke="#00bfa5", class="tech__graph-fill")
+									span.tech__name JavaScript & JQuery
+						div.tech-backend
+							div.tech__title
+								h3 Backend
+							ul.tech__list
+								li.tech__item
+									svg(width="110", height="110", class="tech__graph-svg")
+										circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+										circle(r="45", cx="50%", cy="50%", stroke="#00bfa5", class="tech__graph-fill")
+									span.tech__name PHP
+								li.tech__item
+									svg(width="110", height="110", class="tech__graph-svg")
+										circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+										circle(r="45", cx="50%", cy="50%", stroke="#00bfa5", class="tech__graph-fill")
+									span.tech__name MySql
+								li.tech__item
+									svg(width="110", height="110", class="tech__graph-svg")
+										circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+										circle(r="45", cx="50%", cy="50%", stroke="#00bfa5", class="tech__graph-fill")
+									span.tech__name Node.js & npm
+								li.tech__item
+									svg(width="110", height="110", class="tech__graph-svg")
+										circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+										circle(r="45", cx="50%", cy="50%", stroke="#00bfa5", class="tech__graph-fill")
+									span.tech__name Mongo.db
+						div.tech-workflow
+							div.tech__title
+								h3 Workflow
+							ul.tech__list
+								li.tech__item
+									svg(width="110", height="110", class="tech__graph-svg")
+										circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+										circle(r="45", cx="50%", cy="50%", stroke="#00bfa5", class="tech__graph-fill")
+									span.tech__name Git
+								li.tech__item
+									svg(width="110", height="110", class="tech__graph-svg")
+										circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+										circle(r="45", cx="50%", cy="50%", stroke="#00bfa5", class="tech__graph-fill")
+									span.tech__name Gulp
+								li.tech__item
+									svg(width="110", height="110", class="tech__graph-svg")
+										circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+										circle(r="45", cx="50%", cy="50%", stroke="#00bfa5", class="tech__graph-fill")
+									span.tech__name Bower
+	section.contacts
+			div.contact-map
+			div.container
+				div.contact-inner
+					div.contact-menu
+						.common-subtitle Контакты
+						ul.contact__list
+							li.contact__item
+								a.contact__link
+									+icon('skype','green__mod')
+									span.contact__link-name Skype
+							li.contact__item
+								a.contact__link
+									+icon('envlope	','green__mod')
+									span.contact__link-name Email
+							li.contact__item
+								a.contact__link
+									+icon('phone','green__mod')
+									span.contact__link-name Phone
+							li.contact__item
+								a.contact__link
+									+icon('map_marker','green__mod')
+									span.contact__link-name map
+				include ../common/footer

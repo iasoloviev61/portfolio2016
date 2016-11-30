@@ -1,0 +1,29 @@
+.icon-vk, .icon-github, .icon-in {
+  font-size: 1rem;
+  opacity: 0.5;
+  }
+
+.icon-hamburger {
+  font-size: 2.2rem;
+
+  }
+.green__mod {
+  color:$green;
+  }
+.white__mod {
+  color: #fff;
+}
+.icon-arrow_down {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+.icon-about_header {
+  font-size: 7rem;
+  opacity: 0.06;
+  @include absolute-center;
+  top: -8px;
+  z-index: 3;
+}
+.social__link:hover .icon {
+  opacity: 1;
+}

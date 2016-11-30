@@ -1,26 +1,29 @@
 header.header
 	div.container-big
-		div.header-social
-			ul.social__list
-				li.social__item
-					a(class='social__link' href='https://vk.com' target=_blank)
-						span Вконтакте
-						+icon('vk','red_mod')
-				li.social__item
-					a(class='social__link' href='https://github.com' target=_blank)
-						span git
-						+icon('github','red_mod')
-				li.social__item
-					a(class='social__link' href='https://linkedin.com' target=_blank)
-						span Линкедин
-						+icon('in','red_mod')
-		nav.header-menu
-			ul.header-menu__list
-				li.header-menu__item
-					a(class="main-menu__link" href="my_work.html") Мои работы
-				li.header-menu__item
-					a(class="main-menu__link" href="blog.html") Блог
-				li.header-menu__item
-					a(class="main-menu__link" href="about.html") Обо мне
-				li.header-menu__item
-					a(class="main-menu__link" href="index.html") Авторизация
+		div.header-content
+			div.header-social
+				ul.social__list
+					li.social__item
+						a(class='social__link' href='https://vk.com' target=_blank)
+							span Вконтакте
+							+icon('vk','white__mod')
+					li.social__item
+						a(class='social__link' href='https://github.com' target=_blank)
+							span git
+							+icon('github','white__mod')
+					li.social__item
+						a(class='social__link' href='https://linkedin.com' target=_blank)
+							span Линкедин
+							+icon('in','white__mod')
+			nav.header-menu
+				a(class="header-menu__link" href="#")
+					+icon('hamburger','white__mod')
+				ul.header-menu__list
+					li.header-menu__item
+						a(class="main-menu__link" href="my_work.html") Мои работы
+					li.header-menu__item
+						a(class="main-menu__link" href="blog.html") Блог
+					li.header-menu__item
+						a(class="main-menu__link" href="about.html") Обо мне
+					li.header-menu__item
+						a(class="main-menu__link" href="index.html") Авторизация

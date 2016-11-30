@@ -1,3 +1,25 @@
 .social__link span{
   display: none;
 }
+.header {
+  flex: 0 0 auto;
+}
+.header-content {
+  display: flex;
+  height: 70px;
+  padding-top: 25px;
+  justify-content: space-between;
+}
+.header-social {
+  //align-self: flex-start;
+}
+.header-menu {
+  //order: 1;
+  }
+.header-menu__link {
+  display: block;
+}
+
+.header-menu__list {
+  display: none;
+}

@@ -1,4 +1,4 @@
-$container-width : 1180;
+$container-width : 95%;
 
 // styles
 html, body {
@@ -22,20 +22,20 @@ img {
 .wrapper {
   position: relative;
   overflow: hidden;
-  min-width: $container-width + 20px;
+  //min-width: $container-width + 20px;
   width: 100%;
   min-height: 100%;
   }
 .container {
   margin: 0 auto;
   position: relative;
-  width: 1140px;
+  width: 90%;
   @include clearfix;
 }
 .container-big {
   margin: 0 auto;
   position: relative;
-  width: 1180px;
+  width: 95%;
   @include clearfix;
   height: 100%;
   }
@@ -92,7 +92,7 @@ html {
 .common-title {
   font-family: $bregular;
   color: $grey-dark;
-  margin-top: 70px;
+  margin: auto;
   margin-bottom: 70px;
   font-size: 63px;
   position: relative;
@@ -119,6 +119,7 @@ html {
 .common-subtitle {
   font-family: $bregular;
   color: $grey-dark;
+  margin: auto;
   margin-bottom:40px;
   font-size: 35px;
   position: relative;
