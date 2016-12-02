@@ -1,33 +1,38 @@
 footer.footer
-	.container
-		div.footer-top
-			nav.footer-menu
-				ul.footer-menu__list
-					li.footer-menu__item
-						a(class="footer-menu__link" href="my_works.html") Мои работы
-					li.footer-menu__item
-						a(class="footer-menu__link" href="about.html") Обо мне
-					li.footer-menu__item
-						a(class="footer-menu__link" href="blog.html") Блог
-					li.footer-menu__item
-						a(class="footer-menu__link" href="index.html") Авторизация
-			div.footer-social
-				ul.social__list
-					li.social__item
-						a(class='social__link' href='https://vk.com' target=_blank)
-							span Вконтакте
-							+icon('vk','red_mod')
-					li.social__item
-						a(class='social__link' href='https://github.com' target=_blank)
-							span git
-							+icon('github','red_mod')
-					li.social__item
-						a(class='social__link' href='https://linkedin.com' target=_blank)
-							span Линкедин
-							+icon('in','red_mod')
-		div.footer-bottom
-			div.footer-text Я веб разработчик из Шатуры, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool
-			div.footer-copyright @ Соловьёв Игорь | Создано с любовью в loftschool | 2016
+	div.footer-top
+		div.container
+			div.footer-top__inner
+				nav.footer-menu
+					ul.footer-menu__list
+						li.footer-menu__item
+							a(class="footer-menu__link" href="my_works.html") Мои работы
+						li.footer-menu__item
+							a(class="footer-menu__link" href="about.html") Обо мне
+						li.footer-menu__item
+							a(class="footer-menu__link" href="blog.html") Блог
+						li.footer-menu__item
+							a(class="footer-menu__link" href="index.html") Авторизация
+				div.footer-social
+					ul.social__list
+						li.social__item
+							a(class='social__link' href='https://vk.com' target=_blank)
+								span Вконтакте
+								+icon('vk_round','white__mod')
+						li.social__item
+							a(class='social__link' href='https://github.com' target=_blank)
+								span git
+								+icon('github_round','white__mod')
+						li.social__item
+							a(class='social__link' href='https://linkedin.com' target=_blank)
+								span Линкедин
+								+icon('in_round','white__mod')
+	div.footer-bottom
+		div.container
+			div.footer-bottom__inner
+				div.footer-text
+					p Я веб разработчик из Шатуры, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool
+				div.footer-copyright
+					p @ Соловьёв Игорь | Создано с любовью в loftschool | 2016
 
 
 script(src="assets/js/foundation.js")

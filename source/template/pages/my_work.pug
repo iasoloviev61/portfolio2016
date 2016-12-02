@@ -1,0 +1,129 @@
+extends ../layout/main_layout.pug
+block title
+	title Мои работы
+block content
+	section.welcome
+		include ../common/header
+		img(class="portfolio__header" src="assets/img/bg/portfolio_header.svg")
+
+		div.user-top
+			div.user-data
+				div(class='auth-user__photo' style='background-image: url("assets/img/content/main-foto.jpg")')
+					img(src="assets/img/content/main-foto.jpg" alt="my photo")
+				div.auth-user__desc
+					div.user__name Соловьёв Игорь
+					div.user__text Личный сайт веб разработчика
+		div.user-bottom
+			a(class="arrow-dropdown__link")
+				+icon('arrow_down', 'white__mod')
+			.triangle
+				svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle__svg")
+					polygon(class="traingle__works" points="0,0   0,86   500.8,86   500.8,75.5")
+					polygon(class="traingle__works" points="1000,0   1000,86   500,86   500,75.5")
+	section.works
+		div.works-header
+			div.common-title Мои работы
+				+icon('portfolio_header', 'opacity__mod')
+		div.works-slider
+			div.works-slider__inner
+				div.slider-decsription
+					div.slider-decsription__inner
+						ul.slider-decsription__list
+							li.slider-decsription__item
+								div.common-subtitle Сайт школы онлайн образования
+								div.slider-decsription__tech HTML, CSS, JavaScript
+								a.slider-decsription__link(href="#")
+									+icon('link', 'white__mod')
+									span.slider-decsription__link-text Просмотреть сайт
+							li.slider-decsription__item
+								div.common-subtitle Сайт школы онлайн образования
+								div.slider__overview-tech HTML, CSS, JAva
+								a.slider__overview-link(href="#")
+									+icon('link', 'white__mod')
+									span.overview-link_text Просмотреть сайт
+							li.slider-decsription__item
+								div.common-subtitle Сайт школы онлайн образования
+								div.slider__overview-tech HTML, CSS, JAva
+								a.slider__overview-link(href="#")
+									+icon('link', 'white__mod')
+									span.overview-link_text Просмотреть сайт
+							li.slider-decsription__item
+								div.common-subtitle Сайт школы онлайн образования
+								div.slider__overview-tech HTML, CSS, JAva
+								a.slider__overview-link(href="#")
+									+icon('link', 'white__mod')
+									span.overview-link_text Просмотреть сайт
+
+				div.slider-mainslide
+					div.slider-mainslide__inner
+						ul.slider-mainslide__list
+							li.slider-mainslide__item
+								img.slider-mainslide__img(src="assets/img/content/work.png")
+							li.slider-mainslide__item
+								img.slider-mainslide__img(src="assets/img/content/work.png")
+							li.slider-mainslide__item
+								img.slider-mainslide__img(src="assets/img/content/work.png")
+							li.slider-mainslide__item
+								img.slider-mainslide__img(src="assets/img/content/work.png")
+
+				div.slider-tumbnayls
+					div.slider-tumbnayls-up
+						div.slider-tumbnayls-up__inner
+							a.slider-control__up(href="#")
+								+icon('portf_arrow_down', 'white__mod')
+							ul.slider-tumbnayls-up__list
+								li.slider-tumbnayls-up__item
+									img.slider-tumbnayls-up__img(src="assets/img/content/work.png")
+								li.slider-tumbnayls-up__item
+									img.slider-tumbnayls-up__img(src="assets/img/content/work.png")
+								li.slider-tumbnayls-up__item
+									img.slider-tumbnayls-up__img(src="assets/img/content/work.png")
+								li.slider-tumbnayls-up__item
+									img.slider-tumbnayls-up__img(src="assets/img/content/work.png")
+					div.slider-tumbnayls-down
+						div.slider-tumbnayls-down__inner
+							a.slider-control__down(href="#")
+								+icon('portf_arrow_up', 'white__mod')
+							ul.slider-tumbnayls-down__list
+								li.slider-tumbnayls-down__item
+									img.slider-tumbnayls-down__img(src="assets/img/content/work.png")
+								li.slider-tumbnayls-down__item
+									img.slider-tumbnayls-down__img(src="assets/img/content/work.png")
+								li.slider-tumbnayls-down__item
+									img.slider-tumbnayls-down__img(src="assets/img/content/work.png")
+								li.slider-tumbnayls-down__item
+									img.slider-tumbnayls-down__img(src="assets/img/content/work.png")
+	section.feedback
+		div.feedback-container
+			header.feedback-header
+				div.common-title.feedback-title Что обо мне говорят
+					+icon('about_header','opacity__mod')
+			div.feedback-reviews
+				.review-item
+					.review-item__text
+						p.
+							Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+					.review-item__author
+						.author__photo(style='background-image: url("assets/img/content/autor_dmitry.jpg")')
+							img.author__photo-img(src="assets/img/content/autor_dmitry.jpg")
+						.author__name Дмитрий Ковальчук
+						.author__caption Основатель школы LoftSchool
+				.review-item
+					.review-item__text
+						p.
+							Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+					.review-item__author
+						.author__photo
+							img.author__photo-img(src="..assets/img/content/autor_zar.jpg")
+						.author__name Дмитрий Ковальчук
+						.author__caption Основатель школы LoftSchool
+			form.feedback-form
+				h2.feedback-form__title Связаться со мной
+					input.feedback-form__name(type="text" placeholder="Имя", required)
+					input.feedback-form__email(type="email" placeholder="Email", required)
+					textarea.feedback-form__text(placeholder="Ваше сообщение", required)
+					.feedback-form__buttons
+						input.feedback-form__submit(type="button", value="Отправить")
+						input.feedback-form__clear(type="button", value="Очистить")
+		include ../common/footer
+

@@ -2,11 +2,33 @@
   font-size: 1rem;
   opacity: 0.5;
   }
-
+.icon-vk_round, .icon-github_round, .icon-in_round {
+  font-size: 2rem;
+  opacity: 0.5;
+  stroke: #fff;
+}
 .icon-hamburger {
   font-size: 2.2rem;
-
   }
+.icon-skype {
+  font-size: 1.2rem;
+  }
+.icon-envelope {
+  font-size: 1rem;
+}
+.icon-phone {
+  font-size: 1rem;
+}
+.icon-map_marker {
+  font-size: 1.7rem;
+}
+.icon-link {
+  font-size: 1rem;
+}
+.icon-portf_arrow_down, .icon-portf_arrow_up {
+  @include absolute-center;
+  font-size: 1.5rem;
+}
 .green__mod {
   color:$green;
   }
@@ -18,6 +40,13 @@
   opacity: 0.7;
 }
 .icon-about_header {
+  font-size: 7rem;
+  opacity: 0.06;
+  @include absolute-center;
+  top: -8px;
+  z-index: 3;
+}
+.icon-portfolio_header {
   font-size: 7rem;
   opacity: 0.06;
   @include absolute-center;

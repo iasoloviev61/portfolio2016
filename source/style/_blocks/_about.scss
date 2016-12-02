@@ -74,10 +74,10 @@
   position: absolute;
   bottom: 0px;
 }
-.traingle__left_about {
+.traingle__left-about {
   fill: #efeee9; }
 
-.traingle__right_about {
+.traingle__right-about {
   fill: #eeebdf; }
 .vita {
   background: linear-gradient(to right,  #efeee9 0%,#efeee9 50%,#eeebdf 50%, #eeebdf 100%);
@@ -93,14 +93,19 @@
 
   }
 .about__photo {
-  width: 78%;
+  width: 69%;
   margin: 0 auto;
   margin-bottom: 40px;
+  max-width: 450px;
+}
+.about__description {
+  width: 69%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 .about__text {
-  width: 78%;
   text-align: left;
-  margin: 0 auto;
+
 }
 
 .common-subtitle_vita {
@@ -122,10 +127,17 @@
   width: 90%;
   margin: 0 auto;
 }
+.skill__text {
+  margin-bottom: 60px;
+}
+.tech-frontend, .tech-backend, .tech-workflow {
+  margin-bottom: 40px;
+}
 .tech__title {
   font-family: $rmedium;
   font-size: 28px;
   color: $grey-dark;
+  margin-bottom: 20px;
 }
 .tech__graph-svg {
   fill: none;
@@ -138,6 +150,10 @@
 .tech__item {
   position: relative;
   display: inline-block;
+  margin-right: 38px;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 .tech__name {
   position: absolute;
@@ -157,18 +173,41 @@
 .contacts {
   position: relative;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .contact-inner {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  flex-grow: 1;
 }
 .contact-menu {
   border-radius: 5px;
   background-color: rgb(252, 252, 252);
   opacity: 0.851;
-  width: 30%;
+  width: 380px;
   margin: auto;
   }
+.contact__list {
+  width: 80%;
+  margin: 0 auto;
+}
+.contact__item {
+  margin-bottom: 20px;
+  vertical-align: middle;
 
+}
+.contact__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  &:hover .contact__link-name{
+    border-bottom: 1px solid $grey;
+  }
+}
+.contact__link-name {
+  margin-left: 20px;
+  font-family: $rlight;
+  color: $grey;
+}
 
