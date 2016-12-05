@@ -1,7 +1,16 @@
 .icon-vk, .icon-github, .icon-in {
-  font-size: 1rem;
   opacity: 0.5;
   }
+.icon-vk {
+  font-size: 1.2rem;
+}
+.icon-github {
+  font-size: 1.4rem;
+}
+
+.icon-in {
+  font-size: 1.4rem;
+}
 .icon-vk_round, .icon-github_round, .icon-in_round {
   font-size: 2rem;
   opacity: 0.5;
@@ -47,12 +56,15 @@
   z-index: 3;
 }
 .icon-portfolio_header {
-  font-size: 7rem;
+  font-size: 5rem;
   opacity: 0.06;
   @include absolute-center;
-  top: -8px;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 3;
-}
-.social__link:hover .icon {
-  opacity: 1;
 }

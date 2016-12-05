@@ -22,7 +22,7 @@ block content
 					polygon(class="traingle__works" points="1000,0   1000,86   500,86   500,75.5")
 	section.works
 		div.works-header
-			div.common-title Мои работы
+			div.common-title.work__title Мои работы
 				+icon('portfolio_header', 'opacity__mod')
 		div.works-slider
 			div.works-slider__inner
@@ -30,29 +30,30 @@ block content
 					div.slider-decsription__inner
 						ul.slider-decsription__list
 							li.slider-decsription__item
-								div.common-subtitle Сайт школы онлайн образования
+								div.common-subtitle 1Сайт школы онлайн образования
 								div.slider-decsription__tech HTML, CSS, JavaScript
 								a.slider-decsription__link(href="#")
 									+icon('link', 'white__mod')
 									span.slider-decsription__link-text Просмотреть сайт
 							li.slider-decsription__item
-								div.common-subtitle Сайт школы онлайн образования
-								div.slider__overview-tech HTML, CSS, JAva
-								a.slider__overview-link(href="#")
+								div.common-subtitle 2Сайт школы онлайн образования
+								div.slider-decsription__tech HTML, CSS, JavaScript
+								a.slider-decsription__link(href="#")
 									+icon('link', 'white__mod')
-									span.overview-link_text Просмотреть сайт
+									span.slider-decsription__link-text Просмотреть сайт
 							li.slider-decsription__item
-								div.common-subtitle Сайт школы онлайн образования
-								div.slider__overview-tech HTML, CSS, JAva
-								a.slider__overview-link(href="#")
+								div.common-subtitle 3Сайт школы онлайн образования
+								div.slider-decsription__tech HTML, CSS, JavaScript
+								a.slider-decsription__link(href="#")
 									+icon('link', 'white__mod')
-									span.overview-link_text Просмотреть сайт
+									span.slider-decsription__link-text Просмотреть сайт
 							li.slider-decsription__item
-								div.common-subtitle Сайт школы онлайн образования
-								div.slider__overview-tech HTML, CSS, JAva
-								a.slider__overview-link(href="#")
+								div.common-subtitle 4Сайт школы онлайн образования
+								div.slider-decsription__tech HTML, CSS, JavaScript
+								a.slider-decsription__link(href="#")
 									+icon('link', 'white__mod')
-									span.overview-link_text Просмотреть сайт
+									span.slider-decsription__link-text Просмотреть сайт
+
 
 				div.slider-mainslide
 					div.slider-mainslide__inner
@@ -104,26 +105,29 @@ block content
 						p.
 							Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
 					.review-item__author
-						.author__photo(style='background-image: url("assets/img/content/autor_dmitry.jpg")')
+						.author__photo(style='background-image: url("assets/img/content/autor_dmitry	.jpg")')
 							img.author__photo-img(src="assets/img/content/autor_dmitry.jpg")
-						.author__name Дмитрий Ковальчук
-						.author__caption Основатель школы LoftSchool
+						.author__desc
+							.author__name Дмитрий Ковальчук
+							.author__caption Основатель школы LoftSchool
 				.review-item
 					.review-item__text
 						p.
 							Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
 					.review-item__author
-						.author__photo
-							img.author__photo-img(src="..assets/img/content/autor_zar.jpg")
-						.author__name Дмитрий Ковальчук
-						.author__caption Основатель школы LoftSchool
+						.author__photo(style='background-image: url("assets/img/content/autor_zar.jpg")')
+							img.author__photo-img(src="assets/img/content/autor_dmitry.jpg")
+						.author__desc
+							.author__name Дмитрий Ковальчук
+							.author__caption Основатель школы LoftSchool
 			form.feedback-form
-				h2.feedback-form__title Связаться со мной
-					input.feedback-form__name(type="text" placeholder="Имя", required)
-					input.feedback-form__email(type="email" placeholder="Email", required)
-					textarea.feedback-form__text(placeholder="Ваше сообщение", required)
-					.feedback-form__buttons
-						input.feedback-form__submit(type="button", value="Отправить")
-						input.feedback-form__clear(type="button", value="Очистить")
+				div.feedback-form__header
+					div.common-subtitle Связаться со мной
+				input.feedback-form__name(type="text" placeholder="Имя", required)
+				input.feedback-form__email(type="email" placeholder="Email", required)
+				textarea.feedback-form__text(placeholder="Ваше сообщение", required)
+				.feedback-form__buttons
+					input.feedback-form__submit(type="button", value="Отправить")
+					input.feedback-form__clear(type="button", value="Очистить")
 		include ../common/footer
 
