@@ -1,7 +1,7 @@
 .welcome {
   background-image: url("../img/bg/mountan.png");
   @include cover();
-  min-height: 70vh;
+  min-height: 100vh;
   //min-height: 650px;
   display: flex;
   flex-direction: column;
@@ -54,7 +54,7 @@
   position: absolute;
   display: inline-block;
   //bottom: 50px;
-  top: 0;
+  top: 50%;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -130,6 +130,9 @@
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+  @include phones {
+    font-size: 35px;
+  }
 }
 .about__photo {
   width: 100%;
@@ -142,10 +145,16 @@
   max-width: 450px;
   margin: 0 auto;
   text-align: center;
+  @include phones {
+    width: 95%;
+  }
 }
 .about__text {
   text-align: left;
-
+    @include phones {
+      font-size: 14px;
+      line-height: 28px;
+    }
 }
 
 .about__subtitle {
@@ -181,6 +190,9 @@
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
+  }
+  @include phones {
+    font-size: 21px;
   }
 }
 .skill {
@@ -219,16 +231,34 @@
     background-color: rgb(55, 62, 66);
     opacity: 0.2;
     top: 32%;
-    right: -35px;
+    right: -20px;
 
+  }
+  @include phones {
+    font-size: 21px;
+    &:after,&:before {
+      content: "";
+      display: block;
+      top: 50%;
+      right: -20px;
+    }
   }
 }
 .skill__text, .skill-tech {
   width: 95%;
   margin: 0 auto;
 }
+.skill-tech {
+  @include phones {
+    width: 90%;
+  }
+}
 .skill__text {
   margin-bottom: 45px;
+  @include phones {
+    font-size: 14px;
+    line-height: 28px;
+  }
 }
 .tech-frontend, .tech-backend, .tech-workflow {
   margin-bottom: 40px;
@@ -238,17 +268,28 @@
   font-size: 28px;
   color: $grey-dark;
   margin-bottom: 20px;
+  @include phones {
+    font-size: 21px;
+    text-align: center;
+  }
 }
 .tech__list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -48px;
+  @include phones {
+    justify-content: space-around;
+    margin-left: 0;
+  }
 }
 .tech__item {
   position: relative;
   flex: 0 0 auto;
   margin-left: 38px;
-
+  @include phones {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
 }
 .tech__graph-svg {
   fill: none;
@@ -286,16 +327,21 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  min-height: 650px;
 }
 .contact-menu {
   border-radius: 5px;
   background-color: rgb(252, 252, 252);
   opacity: 0.851;
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
   margin: auto;
   text-align: center;
   padding-top:30px;
   padding-bottom: 30px;
+  @include phones {
+    margin: 0 auto;
+  }
   }
 .contact__list {
   width: 80%;

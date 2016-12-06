@@ -16,6 +16,11 @@
   justify-content: flex-end;
   padding-top: 23px;
   width: 95%;
+  @include phones {
+    ustify-content: center;
+    margin-bottom: 33px;
+  }
+
   }
 .auth-top__link {
   display: block;
@@ -41,6 +46,9 @@
   max-width: 380px;
   margin: auto;
   width: 95%;
+  @include phones {
+    margin-bottom: 38px;
+  }
 }
 .auth-user {
   border-top-left-radius: 5px;
@@ -113,6 +121,9 @@
   height: 100%;
   text-align:center;
   padding: 15px 20px;
+  @include phones {
+    font-size: 14px;
+  }
 }
 
 

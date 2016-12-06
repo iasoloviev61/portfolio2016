@@ -1,0 +1,29 @@
+extends ../layout/main_layout.pug
+block title
+	title Блог
+block content
+	section.welcome
+		include ../common/header
+		img(class="portfolio__header" src="assets/img/bg/portfolio_header.svg")
+
+		div.user-top
+			div.user-data
+				div(class='auth-user__photo' style='background-image: url("assets/img/content/main-foto.jpg")')
+					img(src="assets/img/content/main-foto.jpg" alt="my photo")
+				div.auth-user__desc
+					div.user__name Блог
+					div.user__text Статьи которые я написал
+		div.user-bottom
+			a(class="arrow-dropdown__link")
+				+icon('arrow_down', 'white__mod')
+			.triangle
+				svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle__svg")
+					polygon(class="traingle__works" points="0,0   0,86   500.8,86   500.8,75.5")
+					polygon(class="traingle__works" points="1000,0   1000,86   500,86   500,75.5")
+	section.blog
+		.blog-container
+			aside.sidebar
+			sectio.blog-content
+				
+
+	include ../common/footer

@@ -30,25 +30,25 @@ block content
 					div.slider-decsription__inner
 						ul.slider-decsription__list
 							li.slider-decsription__item
-								div.common-subtitle 1Сайт школы онлайн образования
+								div.common-subtitle.slider-decsription__title 1Сайт школы онлайн образования
 								div.slider-decsription__tech HTML, CSS, JavaScript
 								a.slider-decsription__link(href="#")
 									+icon('link', 'white__mod')
 									span.slider-decsription__link-text Просмотреть сайт
 							li.slider-decsription__item
-								div.common-subtitle 2Сайт школы онлайн образования
+								div.common-subtitle.slider-decsription__title 2Сайт школы онлайн образования
 								div.slider-decsription__tech HTML, CSS, JavaScript
 								a.slider-decsription__link(href="#")
 									+icon('link', 'white__mod')
 									span.slider-decsription__link-text Просмотреть сайт
 							li.slider-decsription__item
-								div.common-subtitle 3Сайт школы онлайн образования
+								div.common-subtitle.slider-decsription__title 3Сайт школы онлайн образования
 								div.slider-decsription__tech HTML, CSS, JavaScript
 								a.slider-decsription__link(href="#")
 									+icon('link', 'white__mod')
 									span.slider-decsription__link-text Просмотреть сайт
 							li.slider-decsription__item
-								div.common-subtitle 4Сайт школы онлайн образования
+								div.common-subtitle.slider-decsription__title 4Сайт школы онлайн образования
 								div.slider-decsription__tech HTML, CSS, JavaScript
 								a.slider-decsription__link(href="#")
 									+icon('link', 'white__mod')
@@ -69,9 +69,9 @@ block content
 
 				div.slider-tumbnayls
 					div.slider-tumbnayls-up
+						a.slider-control__up(href="#")
+							+icon('portf_arrow_down', 'white__mod')
 						div.slider-tumbnayls-up__inner
-							a.slider-control__up(href="#")
-								+icon('portf_arrow_down', 'white__mod')
 							ul.slider-tumbnayls-up__list
 								li.slider-tumbnayls-up__item
 									img.slider-tumbnayls-up__img(src="assets/img/content/work.png")
@@ -82,9 +82,9 @@ block content
 								li.slider-tumbnayls-up__item
 									img.slider-tumbnayls-up__img(src="assets/img/content/work.png")
 					div.slider-tumbnayls-down
+						a.slider-control__down(href="#")
+							+icon('portf_arrow_up', 'white__mod')
 						div.slider-tumbnayls-down__inner
-							a.slider-control__down(href="#")
-								+icon('portf_arrow_up', 'white__mod')
 							ul.slider-tumbnayls-down__list
 								li.slider-tumbnayls-down__item
 									img.slider-tumbnayls-down__img(src="assets/img/content/work.png")
@@ -121,8 +121,9 @@ block content
 							.author__name Дмитрий Ковальчук
 							.author__caption Основатель школы LoftSchool
 			form.feedback-form
+				div.feedback-blur
 				div.feedback-form__header
-					div.common-subtitle Связаться со мной
+					div.common-subtitle.feedback-form__title Связаться со мной
 				input.feedback-form__name(type="text" placeholder="Имя", required)
 				input.feedback-form__email(type="email" placeholder="Email", required)
 				textarea.feedback-form__text(placeholder="Ваше сообщение", required)

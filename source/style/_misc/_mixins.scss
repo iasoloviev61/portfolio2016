@@ -64,6 +64,11 @@
 
 /* --------- responsive mixins --------- */
 
+@mixin big-desktop {
+  @media screen and (max-width: 1800px) {
+    @content;
+  }
+}
 @mixin desktop {
   @media screen and (max-width: 1200px) {
     @content;
@@ -83,7 +88,8 @@
 }
 
 @mixin phones {
-  @media screen and (max-width: 480px) {
+  @media screen and (min-width: 320px) and (max-width:
+480px){
     @content;
   }
 }

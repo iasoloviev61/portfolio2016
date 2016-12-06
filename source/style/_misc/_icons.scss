@@ -18,6 +18,9 @@
 }
 .icon-hamburger {
   font-size: 2.2rem;
+  @include phones {
+    font-size: 1.5rem;
+  }
   }
 .icon-skype {
   font-size: 1.2rem;
@@ -37,6 +40,7 @@
 .icon-portf_arrow_down, .icon-portf_arrow_up {
   @include absolute-center;
   font-size: 1.5rem;
+  z-index: 6;
 }
 .green__mod {
   color:$green;
