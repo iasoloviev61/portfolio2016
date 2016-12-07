@@ -78,7 +78,18 @@
   fill: #efeee9; }
 
 .traingle__right-about {
-  fill: #eeebdf; }
+  fill: #eeebdf;
+  @include phones {
+    fill:  #efeee9;
+  }
+  @include tablets {
+     fill:  #efeee9;
+   }
+  @include laptop {
+    fill:  #efeee9;
+  }
+}
+
 .vita {
 
 }
@@ -91,6 +102,12 @@
    display: flex;
    flex-direction: column;
    background-color: #efeee9;
+  @include tablets {
+    flex: 1 1 100%;
+  }
+  @include laptop {
+    flex: 1 1 100%;
+  }
   }
 .about__header {
   text-align: center;
@@ -132,6 +149,15 @@
   }
   @include phones {
     font-size: 35px;
+    margin-bottom: 25px;
+  }
+  @include tablets {
+    font-size: 49px;
+    margin-bottom: 25px;
+  }
+  @include laptop {
+    font-size: 49px;
+    margin-bottom: 25px;
   }
 }
 .about__photo {
@@ -139,6 +165,12 @@
   margin: 0 auto;
   margin-bottom: 16px;
   max-width: 450px;
+  @include tablets {
+    max-width: 61%;
+    }
+  @include laptop {
+    max-width: 61%;
+  }
 }
 .about__description {
   width: 100%;
@@ -147,6 +179,14 @@
   text-align: center;
   @include phones {
     width: 95%;
+  }
+  @include tablets {
+    max-width: 61%;
+    margin-bottom: 50px;
+  }
+  @include laptop {
+    max-width: 61%;
+    margin-bottom: 50px;
   }
 }
 .about__text {
@@ -194,12 +234,24 @@
   @include phones {
     font-size: 21px;
   }
+  @include tablets {
+     font-size: 30px;
+   }
+  @include laptop {
+    font-size: 30px;
+  }
 }
 .skill {
   flex: 1 0 50%;
   display: flex;
   flex-direction: column;
   background-color: #eeebdf;
+  @include tablets {
+    padding-top: 50px;
+  }
+  @include laptop {
+    padding-top: 50px;
+  }
   }
 .skill__header {
   text-align: center;
@@ -243,6 +295,24 @@
       right: -20px;
     }
   }
+  @include tablets {
+    font-size: 30px;
+    &:after,&:before {
+      content: "";
+      display: block;
+      top: 50%;
+      right: -20px;
+    }
+  }
+  @include laptop {
+    font-size: 30px;
+    &:after,&:before {
+      content: "";
+      display: block;
+      top: 50%;
+      right: -20px;
+    }
+  }
 }
 .skill__text, .skill-tech {
   width: 95%;
@@ -250,7 +320,13 @@
 }
 .skill-tech {
   @include phones {
-    width: 90%;
+      width: 90%;
+    }
+  @include tablets {
+    width: 77%;
+  }
+  @include laptop {
+    width: 77%;
   }
 }
 .skill__text {
@@ -258,17 +334,37 @@
   @include phones {
     font-size: 14px;
     line-height: 28px;
+    margin-bottom: 25px;
+  }
+  @include tablets {
+    width: 61%;
+    text-align: justify;
+  }
+  @include laptop {
+    width: 61%;
+    text-align: justify;
   }
 }
 .tech-frontend, .tech-backend, .tech-workflow {
   margin-bottom: 40px;
+  @include phones{
+    margin-bottom: 0;
+  }
 }
 .tech__title {
   font-family: $rmedium;
   font-size: 28px;
-  color: $grey-dark;
+  color: $grey;
   margin-bottom: 20px;
   @include phones {
+    font-size: 21px;
+    text-align: center;
+  }
+  @include tablets {
+    font-size: 21px;
+    text-align: center;
+  }
+  @include laptop {
     font-size: 21px;
     text-align: center;
   }
@@ -281,12 +377,28 @@
     justify-content: space-around;
     margin-left: 0;
   }
+  @include tablets {
+    justify-content: space-around;
+    margin-left: 0;
+  }
+  @include laptop {
+    justify-content: space-around;
+    margin-left: 0;
+  }
 }
 .tech__item {
   position: relative;
   flex: 0 0 auto;
   margin-left: 38px;
   @include phones {
+    margin-left: 0;
+    margin-bottom: 30px;
+     }
+  @include tablets {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  @include laptop {
     margin-left: 0;
     margin-bottom: 30px;
   }
@@ -356,15 +468,16 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+
   &:hover .contact__link-name{
-    border-bottom: 1px solid $grey;
+    border-bottom: 1px dashed $grey;
   }
 }
 .contact__link-name {
   margin-left: 20px;
   font-family: $rlight;
   color: $grey;
+  border-bottom: 1px dashed transparent;
 }
 
 .contact__subtitle {

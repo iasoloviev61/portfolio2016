@@ -1,0 +1,70 @@
+.blog {
+  background-color: #fff;
+}
+.traingle__blog {
+  fill: #fff;
+}
+.blog-wrap {
+  margin-right: 17%;
+  margin-left: 7%;
+  display: flex;
+  padding-top: 60px;
+}
+.sidebar {
+  flex: 1 0 25%;
+  margin-right: 120px;
+  @include desktop {
+    margin-right: 100px;
+  }
+  @include laptop {
+    margin-right: 100px;
+  }
+}
+.blog-content {
+
+}
+.sidebar__link {
+  text-decoration: none;
+  display: block;
+  padding: 13px;
+  color: $grey;
+}
+.sidebar__item {
+  text-align: right;
+  border-right: 3px solid transparent;
+  &-active {
+    border-right: 3px solid $green;
+    .sidebar__link {
+      color: $green;
+      font-family: $rbold;
+    }
+  }
+  &:hover {
+    border-right: 3px solid $green;
+    .sidebar__link {
+      color: $green;
+      }
+  }
+}
+
+.article__header {
+  font-size: 35px;
+  color: $grey;
+  font-family: $bregular;
+  padding-bottom: 25px;
+}
+.article {
+  padding-bottom: 70px;
+  margin-bottom: 70px;
+  border-bottom: 5px solid #f1f1f2;
+}
+.article__date {
+  color: $green;
+  margin-bottom: 25px;
+}
+.article__text {
+  color: $grey;
+}
+.article__code {
+  background-color: #f5f2f0;
+}

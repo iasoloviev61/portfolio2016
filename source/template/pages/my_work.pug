@@ -14,7 +14,7 @@ block content
 					div.user__name Соловьёв Игорь
 					div.user__text Личный сайт веб разработчика
 		div.user-bottom
-			a(class="arrow-dropdown__link")
+			a(class="arrow-dropdown__link" href="")
 				+icon('arrow_down', 'white__mod')
 			.triangle
 				svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle__svg")
@@ -130,5 +130,7 @@ block content
 				.feedback-form__buttons
 					input.feedback-form__submit(type="button", value="Отправить")
 					input.feedback-form__clear(type="button", value="Очистить")
+			a(class="arrow-dropup__link" href="#")
+				+icon('arrow_down', 'white__mod')
 		include ../common/footer
 

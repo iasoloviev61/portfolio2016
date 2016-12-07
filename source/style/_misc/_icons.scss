@@ -58,6 +58,10 @@
   @include absolute-center;
   top: -8px;
   z-index: 3;
+  @include phones {
+    font-size: 5rem;
+    left: -50%;
+  }
 }
 .icon-portfolio_header {
   font-size: 5rem;

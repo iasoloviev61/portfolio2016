@@ -26,6 +26,9 @@
   @include phones {
     flex-direction: column;
   }
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .footer-menu {
@@ -36,12 +39,19 @@
     justify-content: center;
     margin-bottom: 17px;
   }
+  @include tablets {
+    justify-content: center;
+    margin-bottom: 17px;
+  }
 }
 .footer-social {
   flex: 1 0 auto;
   display: flex;
   flex-direction: row-reverse;
   @include phones {
+    justify-content: center;
+  }
+  @include tablets {
     justify-content: center;
   }
 }
@@ -56,6 +66,12 @@
           margin-left: 8px;
         }
   }
+  @include tablets {
+    display: inline-block;
+    &:nth-child(1n+2) {
+      margin-left: 8px;
+    }
+  }
 }
 .footer-menu__link {
   display: block;
@@ -64,6 +80,9 @@
   font-size: 16px;
   color: #fff;
   @include phones {
+    font-size: 13px;
+  }
+  @include tablets {
     font-size: 13px;
   }
   &:hover {
@@ -76,12 +95,20 @@
   justify-content: space-between;
   margin-top: 18px;
   margin-bottom: 18px;
-  @include phones {}
-  font-size: 13px;
-  line-height: 24px;
-  font-family: $rlight;
-  margin-top: 20px;
-  margin-bottom: 16px;
+  @include phones {
+    font-size: 13px;
+    line-height: 24px;
+    font-family: $rlight;
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
+  @include tablets {
+    font-size: 13px;
+    line-height: 24px;
+    font-family: $rlight;
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
   }
 
 
@@ -96,6 +123,10 @@
     flex: 1 1 auto;
     text-align: center;
   }
+  @include tablets {
+    flex: 1 1 auto;
+    text-align: center;
+  }
 }
 .footer-copyright {
   flex: 1 0 auto;
@@ -104,6 +135,9 @@
   align-items: center;
   flex-wrap: wrap;
   @include phones {
+    flex-direction: column;
+  }
+  @include tablets {
     flex-direction: column;
   }
 }
