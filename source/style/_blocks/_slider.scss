@@ -1,0 +1,228 @@
+.works-slider {
+  flex-grow: 1;
+  display: flex;
+  height: 100vh;
+}
+.works-slider__inner {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.slider-decsription {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 220px;
+  background-color: #efeee9;
+  @include phones {
+    order: 2;
+    width: 100%;
+    flex: 1;
+  }
+  @include tablets {
+    order: 2;
+    width: 100%;
+    flex: 1;
+  }
+}
+.slider-decsription__inner {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  max-width: 420px;
+  //max-height: 320px;
+  @include phones {
+
+  }
+}
+.slider-decsription__list {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  white-space: nowrap;
+  //height: 100%;
+  font-size: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  @include phones {
+    //padding-top: 30px;
+  };
+}
+.slider-decsription__item {
+  display: inline-block;
+  position: relative;
+  white-space: normal;
+  width: 100%;
+}
+
+.slider-decsription__title {
+  @include phones {
+    font-size: 21px;
+    max-width: 170px;
+  }
+}
+.slider-decsription__tech {
+  text-transform: uppercase;
+  font-family: $rmedium;
+  font-size: 16px;
+  color: $green;
+  border-top: 1px solid $green;
+  border-bottom: 1px solid $green;
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 40px;
+  @include phones {
+    font-size: 14px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    margin-bottom: 20px;
+  }
+}
+//
+.slider-decsription__link{
+  border-radius: 5px;
+  background-color: rgb(0, 191, 165);
+  display: inline-block;
+  padding: 15px 20px;
+  text-decoration: none;
+  @include phones {
+    padding: 9px 20px;
+  }
+}
+.slider-decsription__link-text {
+  color: #fff;
+  font-size: 16px;
+  margin-left: 10px;
+  @include phones {
+    font-size: 13px;
+  }
+}
+.slider-mainslide {
+  height: 70%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 260px;
+  background-color: #eeebdf;
+  flex: 1;
+  @include phones {
+    order: 1;
+    width: 100%;
+
+  }
+  @include tablets {
+    order: 1;
+    width: 100%;
+
+  }
+}
+.slider-mainslide__inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-width: 460px;
+  max-height: 300px;
+}
+
+.slider-mainslide__list {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  width: 100%;
+  white-space: nowrap;
+  height: 100%;
+  font-size: 0px;
+  @include phones {
+    padding-top: 25px;
+  }
+}
+.slider-mainslide__item {
+  display: inline-block;
+  position: relative;
+}
+.slider-tumbnayls {
+  width: 50%;
+  height: 30%;
+  display: flex;
+  @include phones {
+    order: 3;
+    width: 100%;
+    height: 13%;
+    max-height: 230px;
+  }
+  @include tablets {
+    order: 3;
+    width: 100%;
+    height: 13%;
+    max-height: 230px;
+  }
+}
+.slider-tumbnayls-up, .slider-tumbnayls-down {
+  flex: 0 0 50%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-width: 470px;
+  justify-content: center;
+  align-items: center;
+  &:before {
+    content: "";
+    display: block;
+    @include absolute-center;
+    background-color: rgba(#b6b4ae, 0.7);
+    z-index: 5;
+  }
+
+}
+
+.slider-tumbnayls-down {
+  &:before {
+    content: "";
+    background-color: rgba(#888372, 0.5);
+  }
+}
+
+.slider-tumbnayls-up__inner, .slider-tumbnayls-down__inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+}
+
+.slider-control__down, .slider-control__up {
+  @include absolute-center;
+}
+
+.slider-tumbnayls-up__list {
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.slider-tumbnayls-up__item {
+  position: relative;
+  overflow: hidden;
+}

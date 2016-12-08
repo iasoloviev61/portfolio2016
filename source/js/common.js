@@ -7,8 +7,21 @@ var myModule = (function () {
         _setUpListners();
     };
     var _setUpListners = function () {
-        console.log('Прослушка событий');
-    }
+        $('#loginButton').on('click', _singUp);
+        $('#return').on('click', _singUp);
+
+    };
+    var _singUp = function (e) {
+        e.preventDefault();
+        $('.auth-flipper').toggleClass('flip');
+        if ($('.auth-flipper').hasClass('flip')) {
+            $('#loginButton').hide();
+        }
+        else {
+            $('#loginButton').show();
+        }
+    };
+
     return {
         init: init
     };
