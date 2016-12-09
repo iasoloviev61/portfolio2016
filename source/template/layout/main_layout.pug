@@ -3,6 +3,18 @@ html(lang="ru-RU")
 	include ../mixins/icon_mix.pug
 	include ../common/head.pug
 	body
+		.main-menu
+			.main-menu__left
+			.main-menu__right
+			ul.main-menu__list
+				li.main-menu__item
+					a.main-menu__link(href="my_work.html") Мои работы
+				li.main-menu__item
+					a.main-menu__link(href="about.html") Обо мне
+				li.main-menu__item
+					a.main-menu__link(href="blog.html") Блог
+				li.main-menu__item
+					a.main-menu__link(href="index.html") Авторизация
 		.wrapper
 			.maincontent
 				block content

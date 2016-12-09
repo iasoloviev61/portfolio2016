@@ -115,38 +115,7 @@
 .about__title {
   font-size: 4rem;
   margin-bottom: 35px;
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 22px;
-    height: 5px;
-    background-color: rgb(55, 62, 66);
-    opacity: 0.2;
-    top: 50%;
-    left: -44px;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 22px;
-    height: 5px;
-    background-color: rgb(55, 62, 66);
-    opacity: 0.2;
-    top: 50%;
-    right: -44px;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
+
   @include phones {
     font-size: 35px;
     margin-bottom: 25px;
@@ -199,38 +168,7 @@
 
 .about__subtitle {
   margin-bottom: 20px;
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 22px;
-    height: 5px;
-    background-color: rgb(55, 62, 66);
-    opacity: 0.2;
-    top: 50%;
-    left: -47px;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 22px;
-    height: 5px;
-    background-color: rgb(55, 62, 66);
-    opacity: 0.2;
-    top: 50%;
-    right: -47px;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
+
   @include phones {
     font-size: 21px;
   }
@@ -262,30 +200,6 @@
   font-size: 2rem;
   margin-bottom: 25px;
   padding-top: 10px;
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 22px;
-    height: 5px;
-    background-color: rgb(55, 62, 66);
-    opacity: 0.2;
-    top: 32%;
-    left: -35px;
-
-  }
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 22px;
-    height: 5px;
-    background-color: rgb(55, 62, 66);
-    opacity: 0.2;
-    top: 32%;
-    right: -20px;
-
-  }
   @include phones {
     font-size: 21px;
     &:after,&:before {
@@ -328,6 +242,9 @@
   @include laptop {
     width: 77%;
   }
+  @include desktop {
+    margin-left: 45px;
+  }
 }
 .skill__text {
   margin-bottom: 45px;
@@ -350,6 +267,7 @@
   @include phones{
     margin-bottom: 0;
   }
+
 }
 .tech__title {
   font-family: $rmedium;
@@ -399,10 +317,11 @@
     margin-bottom: 30px;
   }
   @include laptop {
+    margin-bottom: 20px;
     margin-left: 0;
-    margin-bottom: 30px;
   }
-}
+   }
+
 .tech__graph-svg {
   fill: none;
   stroke-width: 20;
@@ -483,36 +402,4 @@
 .contact__subtitle {
   color: #373e42;
   margin-bottom: 25px;
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 22px;
-    height: 5px;
-    background-color: rgb(55, 62, 66);
-    opacity: 0.2;
-    top: 50%;
-    left: -47px;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 22px;
-    height: 5px;
-    background-color: rgb(55, 62, 66);
-    opacity: 0.2;
-    top: 50%;
-    right: -47px;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
 }
