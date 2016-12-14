@@ -1,38 +1,38 @@
 $(document).ready(function () {
     svg4everybody({});
 });
-var myModule = (function () {
-
-    var init = function () {
-        _setUpListners();
-    };
-    var _setUpListners = function () {
-        $('#loginButton').on('click', _singUp);
-        $('#return').on('click', _singUp);
-        $('.header-menu__link').on('click', _startMenu);
-    };
-    var _singUp = function (e) {
-        e.preventDefault();
-        $('.auth-flipper').toggleClass('flip');
-        if ($('.auth-flipper').hasClass('flip')) {
-            $('#loginButton').fadeTo(500, 0);
-        }
-        else {
-            $('#loginButton').fadeTo(500, 1);
-        }
-    };
-    var _startMenu = function (e) {
-        e.preventDefault();
-        $('.main-menu').addClass('main-menu_active');
-        setTimeout(function() {
-            $('.main-menu__list').addClass('main-menu__list_active');
-        }, 800);
-    };
-
-    return {
-        init: init
-    };
-
-})();
-
-myModule.init();
+// //yandex map
+// $(function () {
+//     ymaps.ready(init);
+//     var myMap;
+//
+//     function init(){
+//         myMap = new ymaps.Map("map", {
+//             center: [55.74157433, 37.62563670],
+//             zoom: 14,
+//             controls : [],
+//         });
+//
+//         var coords = [
+//                 [55.74135848, 37.62595538],
+//                 [55.73920374, 37.65363578],
+//                 [55.73678254, 37.61827353],
+//
+//             ],
+//             myCollection = new ymaps.GeoObjectCollection({}, {
+//                 draggable: false,
+//                 // iconLayout: 'default#image',
+//                 // iconImageHref: '../img/map-marker.svg',
+//                 // iconImageSize: [46, 57],
+//                 // iconImageOffset: [-26, -52]
+//             });
+//
+//         for (var i = 0; i < coords.length; i++) {
+//             myCollection.add(new ymaps.Placemark(coords[i]));
+//         }
+//
+//         myMap.geoObjects.add(myCollection);
+//
+//         myMap.behaviors.disable('scrollZoom');
+//     }
+// });

@@ -95,42 +95,44 @@ block content
 								li.slider-tumbnayls-down__item
 									img.slider-tumbnayls-down__img(src="assets/img/content/work.png")
 	section.feedback
-		div.feedback-container
-			header.feedback-header
-				div.common-title.feedback-title Что обо мне говорят
-					+icon('about_header','opacity__mod')
-			div.feedback-reviews
-				.review-item
-					.review-item__text
-						p.
-							Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-					.review-item__author
-						.author__photo(style='background-image: url("assets/img/content/autor_dmitry	.jpg")')
-							img.author__photo-img(src="assets/img/content/autor_dmitry.jpg")
-						.author__desc
-							.author__name Дмитрий Ковальчук
-							.author__caption Основатель школы LoftSchool
-				.review-item
-					.review-item__text
-						p.
-							Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-					.review-item__author
-						.author__photo(style='background-image: url("assets/img/content/autor_zar.jpg")')
-							img.author__photo-img(src="assets/img/content/autor_dmitry.jpg")
-						.author__desc
-							.author__name Дмитрий Ковальчук
-							.author__caption Основатель школы LoftSchool
+		div.blur__background
+		header.feedback-header
+			div.common-title.feedback-title Что обо мне говорят
+				+icon('about_header','opacity__mod')
+		div.feedback-reviews
+			.review-item
+				.review-item__text
+					p.
+						Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+				.review-item__author
+					.author__photo(style='background-image: url("assets/img/content/autor_dmitry	.jpg")')
+					img.author__photo-img(src="assets/img/content/autor_dmitry.jpg")
+					.author__desc
+						.author__name Дмитрий Ковальчук
+						.author__caption Основатель школы LoftSchool
+			.review-item
+				.review-item__text
+					p.
+						Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+				.review-item__author
+					.author__photo(style='background-image: url("assets/img/content/autor_zar.jpg")')
+						img.author__photo-img(src="assets/img/content/autor_dmitry.jpg")
+					.author__desc
+						.author__name Дмитрий Ковальчук
+						.author__caption Основатель школы LoftSchool
+		div.blur__form-wrapper
+			div.blur__form
 			form.feedback-form
-				div.feedback-blur
 				div.feedback-form__header
-					div.common-subtitle.feedback-form__title Связаться со мной
+						div.common-subtitle.feedback-form__title Связаться со мной
 				input.feedback-form__name(type="text" placeholder="Имя", required)
 				input.feedback-form__email(type="email" placeholder="Email", required)
 				textarea.feedback-form__text(placeholder="Ваше сообщение", required)
 				.feedback-form__buttons
 					input.feedback-form__submit(type="button", value="Отправить")
 					input.feedback-form__clear(type="button", value="Очистить")
-			a(class="arrow-dropup__link" href="#")
-				+icon('arrow_down', 'white__mod')
-		include ../common/footer
+		a(class="arrow-dropup__link" href="#")
+			+icon('arrow_down', 'white__mod')
+
+	include ../common/footer
 

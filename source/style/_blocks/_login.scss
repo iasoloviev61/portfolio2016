@@ -1,11 +1,39 @@
 .start {
-  background: url("../img/bg/mountan.png") no-repeat;
-  @include cover();
+  //background: url("../img/bg/mountan.png") no-repeat;
+  //@include cover();
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
   }
 
+.parallax {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  }
+
+.parallax__layer {
+  position: absolute;
+  width: 2500px;
+  height: 100%;
+  left: 50%;
+  margin-left: -1250px;
+  bottom: 0;
+  img {
+    bottom: 0;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+  }
+}
 .start-content {
   display: flex;
   flex-direction: column;
@@ -16,6 +44,7 @@
   justify-content: flex-end;
   padding-top: 23px;
   width: 95%;
+  position: relative;
   @include phones {
     justify-content: center;
     margin-bottom: 33px;

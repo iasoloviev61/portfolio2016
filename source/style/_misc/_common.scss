@@ -41,6 +41,8 @@ img {
   }
 .maincontent {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 // tag styles reset

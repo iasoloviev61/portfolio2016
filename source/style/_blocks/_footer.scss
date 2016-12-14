@@ -110,6 +110,9 @@
     margin-top: 20px;
     margin-bottom: 16px;
   }
+  @include laptop {
+    flex-flow: column;
+  }
   }
 
 
@@ -128,6 +131,9 @@
     flex: 1 1 auto;
     text-align: center;
   }
+  @include laptop {
+    text-align: center;
+  }
 }
 .footer-copyright {
   flex: 1 0 auto;
@@ -140,5 +146,9 @@
   }
   @include tablets {
     flex-direction: column;
+  }
+  @include laptop {
+    flex-direction: row;
+    justify-content: center;
   }
 }
