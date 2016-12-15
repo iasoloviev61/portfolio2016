@@ -65,24 +65,24 @@
 /* --------- responsive mixins --------- */
 
 @mixin big-desktop {
-  @media screen and (max-width: 1800px) {
+  @media screen and (min-width: 1201px) and (max-width: 1800px) {
     @content;
   }
 }
 @mixin desktop {
-  @media screen and (max-width: 1200px) {
+  @media screen and (min-width: 993px) and (max-width: 1200px) {
     @content;
   }
 }
 
 @mixin laptop {
-  @media screen and (max-width: 992px) {
+  @media screen and (min-width: 769px) and(max-width: 992px) {
     @content;
   }
 }
 
 @mixin tablets {
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 481px) and (max-width: 768px) {
     @content;
   }
 }

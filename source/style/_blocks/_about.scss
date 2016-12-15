@@ -146,16 +146,16 @@
   max-width: 450px;
   margin: 0 auto;
   text-align: center;
-  @include phones {
-    width: 95%;
-  }
-  @include tablets {
+   @include tablets {
     max-width: 61%;
     margin-bottom: 50px;
   }
   @include laptop {
     max-width: 61%;
     margin-bottom: 50px;
+  }
+  @include phones {
+    width: 95%;
   }
 }
 .about__text {
@@ -233,6 +233,7 @@
   margin: 0 auto;
 }
 .skill-tech {
+
   @include phones {
       width: 90%;
     }
@@ -243,8 +244,9 @@
     width: 77%;
   }
   @include desktop {
-    margin-left: 45px;
-  }
+     //margin-left: 45px;
+   }
+
 }
 .skill__text {
   margin-bottom: 45px;
@@ -308,6 +310,7 @@
   position: relative;
   flex: 0 0 auto;
   margin-left: 38px;
+  opacity: 0;
   @include phones {
     margin-left: 0;
     margin-bottom: 30px;
@@ -325,10 +328,45 @@
 .tech__graph-svg {
   fill: none;
   stroke-width: 20;
-  position: relative;}
-
+  position: relative;
+}
 .tech__graph-fill {
   stroke-dasharray: 282.5;
+  stroke-dashoffset: 282.5;
+  transition: stroke-dashoffset 1s;
+  transform-origin: 50%;
+  transform: rotate(-90deg);
+  &_html {
+    stroke-dashoffset: 30;
+  }
+  &_css3 {
+    stroke-dashoffset: 50;
+  }
+  &_javascript {
+    stroke-dashoffset: 50;
+  }
+  &_php {
+    stroke-dashoffset: 100;
+  }
+  &_mysql {
+    stroke-dashoffset: 140;
+  }
+  &_nodejs {
+    stroke-dashoffset: 80;
+  }
+  &_mongodb {
+    stroke-dashoffset: 160;
+  }
+  &_git {
+    stroke-dashoffset: 30;
+  }
+  &_gulp {
+    stroke-dashoffset: 40;
+  }
+  &_bower {
+    stroke-dashoffset: 50;
+  }
+
 }
 
 .tech__name {

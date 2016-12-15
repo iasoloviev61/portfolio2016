@@ -34,5 +34,5 @@ var mouseParalax = (function() {
     };
 
 })();
-
 mouseParalax.init();
+

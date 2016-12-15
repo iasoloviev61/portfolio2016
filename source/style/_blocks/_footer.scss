@@ -134,6 +134,9 @@
   @include laptop {
     text-align: center;
   }
+  @include desktop {
+    flex: 0 1 50%;
+  }
 }
 .footer-copyright {
   flex: 1 0 auto;

@@ -41,5 +41,5 @@ var flipper = (function () {
     };
 
 })();
-
 flipper.init();
+

@@ -27,5 +27,4 @@ var blur = (function () {
         init: init
     }
 })();
-
 blur.init();

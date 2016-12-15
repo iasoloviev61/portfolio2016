@@ -247,7 +247,9 @@
 }
 // Стрелка вверх
 .arrow-dropup__link {
-  margin-bottom: 70px;
+  display: block;
+  width: 35px;
+  margin: 60px auto;
   & svg {
     transform: rotate(180deg);
   }
