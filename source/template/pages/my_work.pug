@@ -70,30 +70,30 @@ block content
 				div.slider-tumbnayls
 					div.slider-tumbnayls-up
 						a.slider-control__up(href="#")
-							+icon('portf_arrow_down', 'white__mod')
+							+icon('portf_arrow_up', 'white__mod')
 						div.slider-tumbnayls-up__inner
-							ul.slider-tumbnayls-up__list
-								li.slider-tumbnayls-up__item
-									img.slider-tumbnayls-up__img(src="assets/img/content/work.png")
-								li.slider-tumbnayls-up__item
-									img.slider-tumbnayls-up__img(src="assets/img/content/work.png")
-								li.slider-tumbnayls-up__item
-									img.slider-tumbnayls-up__img(src="assets/img/content/work.png")
-								li.slider-tumbnayls-up__item
-									img.slider-tumbnayls-up__img(src="assets/img/content/work.png")
+							ul.slider-tumbnayls__list
+								li.slider-tumbnayls__item.active
+									img.slider-tumbnaylsimg(src="assets/img/content/work.png")
+								li.slider-tumbnayls__item
+									img.slider-tumbnayls__img(src="assets/img/content/work.png")
+								li.slider-tumbnayls__item
+									img.slider-tumbnayls__img(src="assets/img/content/work.png")
+								li.slider-tumbnayls__item
+									img.slider-tumbnayls__img(src="assets/img/content/work.png")
 					div.slider-tumbnayls-down
 						a.slider-control__down(href="#")
-							+icon('portf_arrow_up', 'white__mod')
+							+icon('portf_arrow_down', 'white__mod')
 						div.slider-tumbnayls-down__inner
-							ul.slider-tumbnayls-down__list
-								li.slider-tumbnayls-down__item
-									img.slider-tumbnayls-down__img(src="assets/img/content/work.png")
-								li.slider-tumbnayls-down__item
-									img.slider-tumbnayls-down__img(src="assets/img/content/work.png")
-								li.slider-tumbnayls-down__item
-									img.slider-tumbnayls-down__img(src="assets/img/content/work.png")
-								li.slider-tumbnayls-down__item
-									img.slider-tumbnayls-down__img(src="assets/img/content/work.png")
+							ul.slider-tumbnayls__list
+								li.slider-tumbnayls__item.active
+									img.slider-tumbnayls__img(src="assets/img/content/work.png")
+								li.slider-tumbnayls__item
+									img.slider-tumbnayls__img(src="assets/img/content/work.png")
+								li.slider-tumbnayls__item
+									img.slider-tumbnayls__img(src="assets/img/content/work.png")
+								li.slider-tumbnayls__item
+									img.slider-tumbnayls__img(src="assets/img/content/work.png")
 	section.feedback
 		div.blur__background
 		header.feedback-header
@@ -122,17 +122,24 @@ block content
 						.author__caption Основатель школы LoftSchool
 		div.blur__form-wrapper
 			div.blur__form
-			form.feedback-form
+			form.feedback-form#feedback-form
 				div.feedback-form__header
 						div.common-subtitle.feedback-form__title Связаться со мной
-				input.feedback-form__name(type="text" placeholder="Имя", required)
-				input.feedback-form__email(type="email" placeholder="Email", required)
-				textarea.feedback-form__text(placeholder="Ваше сообщение", required)
+				input.feedback-form__name(type="text" placeholder="Имя" qtip-content="Введите имя")
+				input.feedback-form__email(type="email" placeholder="Email" qtip-content="Введите адрес электронной почты")
+				textarea.feedback-form__text(placeholder="Ваше сообщение" qtip-content="Введите сообщение")
 				.feedback-form__buttons
-					input.feedback-form__submit(type="button", value="Отправить")
-					input.feedback-form__clear(type="button", value="Очистить")
+					button.feedback-form__submit(type="submit", value="Отправить") Отправить
+					button.feedback-form__clear(type="reset", value="Очистить") Очистить
 		a(class="arrow-dropup__link" href="#")
 			+icon('arrow_down', 'white__mod')
-
+	div.status-popup.popup#success
+		div.status-popup__inner
+			div.status-popup__message Сообщение отправлено
+				a.status-popup__close.btn(href="#") Закрыть
+	div.status-popup.popup#error
+		div.status-popup__inner
+			div.status-popup__message.error-message Произошла ошибка
+				a.status-popup__close.btn(href="#") Закрыть
 	include ../common/footer
 

@@ -1,7 +1,3 @@
-// ==============================
-// Parallax3d
-// ==============================
-
 var mouseParalax = (function() {
 
     function init () {
@@ -34,5 +30,5 @@ var mouseParalax = (function() {
     };
 
 })();
-mouseParalax.init();
+
 

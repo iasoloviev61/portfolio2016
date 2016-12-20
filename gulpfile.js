@@ -33,7 +33,8 @@ $.gulp.task('default', $.gulp.series(
     'css:foundation',
     'sprite:png',
     'copy:files',
-    'copy:fonts'
+    'copy:fonts',
+    'copy:phpLibs'
   ),
   $.gulp.parallel(
     'watch',

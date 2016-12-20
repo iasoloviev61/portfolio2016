@@ -1,5 +1,6 @@
 .icon-vk, .icon-github, .icon-in {
   opacity: 0.5;
+  transition: opacity 0.5s;
   }
 .icon-vk {
   font-size: 1.2rem;
@@ -15,6 +16,7 @@
   font-size: 2rem;
   opacity: 0.5;
   stroke: #fff;
+  transition: opacity 0.5s;
 }
 .icon-hamburger {
   font-size: 2.2rem;

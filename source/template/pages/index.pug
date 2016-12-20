@@ -26,7 +26,7 @@ block content
 				img.parallax__layer_img(src="assets/img/bg/parallax/layer-10.png")
 		div.start-content
 			div.auth-top
-				a(class='auth-top__link' id='loginButton' href="admin.html") Авторизоваться
+				a(class='auth-top__link' id='loginButton' href="#") Авторизоваться
 			main.auth-bottom
 				div.auth-flipper
 					div.auth
@@ -60,12 +60,12 @@ block content
 								li.auth-menu__item
 									a(class='auth-menu__link' href="blog.html") Блог
 					div.auth-popup
-						form.auth-form
+						form.auth-form#auth-form
 							div.common-subtitle.auth-popup__title Авторизуйтесь
 							div.auth-form__login(id="auth-form__login")
-								input(class="auth-input__login-name" type="text" name="login" placeholder="Логин" required)
+								input(class="auth-input__login-name" type="text" name="login" placeholder="Логин" qtip-content="Необходимо ввести логин")
 							div.auth-form__password
-								input(class="auth-input__password" type="password" name="pasword" placeholder="Пароль" required)
+								input(class="auth-input__password" type="password" name="pasword" placeholder="Пароль" qtip-content="Необходимо ввести пароль")
 							div.auth-form__checkbox
 								label.auth-label__checkbox
 									input(class="auth-input__checkbox" type="checkbox" name="notrobot")
@@ -82,11 +82,14 @@ block content
 									input(class="auth-input__radio" type="radio" name="input-radio" value="no")
 									div.auth-input__radio_fake
 									div.auth-inout__radio_title Не уверен
-						nav.auth-menu__nav
-							ul.auth-menu__list
-								li.auth-menu__item.auth-menu__item_login
-									a(class='auth-menu__link' id="return" href="#") На главную
-								li.auth-menu__item.auth-menu__item_login
-									a(class='auth-menu__link' id="login" href="#") Войти
+							.auth-form__buttons
+								button.auth-form__submit(type="submit" id="return") На главную
+								button.auth-form__submit(type="submit" value="login") Войти
+		//				nav.auth-menu__nav
+		//					ul.auth-menu__list
+		//						li.auth-menu__item.auth-menu__item_login
+		//							a(class='auth-menu__link' id="return" href="#") На главную
+		//						li.auth-menu__item.auth-menu__item_login
+		//							a(class='auth-menu__link' id="login" href="#") Войти
 		include ../common/footer_auth
 

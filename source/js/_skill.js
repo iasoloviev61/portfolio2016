@@ -44,4 +44,3 @@ var skill = (function() {
     };
 
 })();
-skill.init();

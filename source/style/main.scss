@@ -6,13 +6,15 @@
 @import "_misc/layout";
 @import "_misc/sprite";
 @import "_misc/icons";
+@import "_misc/widgets";
 // blocks
 @import "_misc/common";
+@import "_blocks/preloader";
 @import "_blocks/header";
+@import "_blocks/mainmenu";
 @import "_blocks/login";
 @import "_blocks/about";
 @import "_blocks/my_works";
 @import "_blocks/slider";
 @import "_blocks/blog";
 @import "_blocks/footer";
-@import "_misc/_media/phones";

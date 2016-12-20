@@ -20,11 +20,10 @@ var blur = (function () {
             'background-size' : imagewidth + 'px' + ' ' + 'auto',
             'background-position' : posLeft + 'px' + ' ' + positionTop + 'px'
         });
-        console.log('Ширина изоображения: ' + imagewidth, 'Позиция слева : ' + posLeft, 'Позиция сверху: ' + positionTop);
+
     };
 
     return {
         init: init
     }
 })();
-blur.init();

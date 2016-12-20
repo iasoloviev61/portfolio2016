@@ -123,17 +123,21 @@
     font-size: 21px;
   }
 }
-.feedback-form .feedback-form__name, .feedback-form__email, .feedback-form__text {
+.feedback-form__name, .feedback-form__email, .feedback-form__text {
   display: block;
   width: 90%;
   margin: 0 auto 20px;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 10px;
   padding: 15px 20px;
   outline: none;
 }
+.has-error {
+  border: 1px solid $red;
+}
 .feedback-form__text {
   height: 140px;
+  resize: none;
 }
 .feedback-form__buttons {
   display: flex;
@@ -148,6 +152,10 @@
   background: rgba($green, .8);
   flex-grow: 1;
   cursor: pointer;
+  transition: background 0.5s;
+  &:hover {
+    background: rgba($green-dark, .8);
+  }
 }
 .feedback-form__submit {
   border-right: 2px solid rgba(222, 227, 231, 0.502);
@@ -256,4 +264,38 @@
   @include phones {
     margin-bottom: 50px;
   }
+}
+// popup стили
+.popup {
+  display: none;
+}
+.status-popup__inner {
+  padding: 20px;
+  text-align: center;
+}
+
+.status-popup__message {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.status-popup {
+  width: 240px;
+}
+
+.error-message {
+  color: $red;
+}
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  background: $green;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 9px 16px;
+  font-family: $rregular;
 }
