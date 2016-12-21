@@ -9,6 +9,15 @@
   margin-left: 7%;
   display: flex;
   padding-top: 60px;
+  @include phones() {
+    width: 95%;
+    margin: 0 auto;
+  }
+  @include tablets() {
+    width: 95%;
+    margin: 0 auto;
+  }
+
 }
 .sidebar {
   flex: 1 0 25%;
@@ -18,16 +27,89 @@
   }
   @include laptop {
     margin-right: 100px;
+    //display: none;
+  }
+  @include phones() {
+    display: none;
+  }
+  @include tablets() {
+    display: none;
   }
 }
 .blog-content {
-
+  @include phones() {
+    width: 100%;
+  }
+  @include tablets() {
+    width: 100%;
+  }
+}
+.sidebar-fixed {
+  position: fixed;
+  display: none;
+  height: 100%;
+  width: 280px;
+  background-color: $green;
+  z-index: 100;
+  text-align: right;
+  left: -280px;
+  z-index: 150;
+  transition: left 1s;
+  @include phones() {
+    display: block;
+  }
+  @include tablets() {
+    display: block;
+  }
+  }
+.sidebar-fixed_show {
+  left: 0;
+}
+.sidebar-fixed__btn {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%);
+  background: $green;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sidebar-wrap_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  & .sidebar__left {
+    width: 25%;
+    margin-right: 10%;
+    padding-left: 7%;
+    @include phones() {
+      width: 95%;
+      margin: 0 auto;
+      padding-left: 0;
+    }
+  }
+  & .sidebar__right {
+    width: 65%;
+    @include phones() {
+      width: 15%;
+    }
+  }
 }
 .sidebar__link {
   text-decoration: none;
   display: block;
   padding: 13px;
   color: $grey;
+  @include phones() {
+     color: rgba(#fff, 0.8);
+   }
+  @include tablets() {
+    color: rgba(#fff, 0.8);
+  }
 }
 .sidebar__item {
   text-align: right;
@@ -43,8 +125,53 @@
     border-right: 3px solid $green;
     .sidebar__link {
       color: $green;
-      }
+    }
   }
+  @include phones() {
+    &-active {
+      .sidebar__link {
+        color: #fff;
+        font-family: $rbold;
+      }
+    }
+    &:hover {
+      .sidebar__link {
+        color: #fff;
+        font-family: $rbold;
+      }
+    }
+  }
+  @include tablets() {
+    &-active {
+      border-right: 3px solid $green;
+      .sidebar__link {
+        color: #fff;
+        font-family: $rbold;
+      }
+    }
+    &:hover {
+      border-right: 3px solid $green;
+      .sidebar__link {
+        color: #fff;
+        font-family: $rbold;
+      }
+    }
+  }
+}
+
+.titles--fixed {
+  position: fixed;
+}
+.titles {
+  height: 100%;
+  width: 280px;
+  margin-right: 10%;
+  text-align: right;
+  left: -280px;
+  background: #6c9c5a;
+  z-index: 100;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .article__header {
@@ -52,11 +179,25 @@
   color: $grey;
   font-family: $bregular;
   padding-bottom: 25px;
+  @include phones() {
+    font-size: 21px;
+  }
+  @include tablets() {
+    font-size: 21px;
+  }
 }
 .article {
   padding-bottom: 70px;
   margin-bottom: 70px;
   border-bottom: 5px solid #f1f1f2;
+  @include phones() {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+  @include tablets() {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
 }
 .article__date {
   color: $green;

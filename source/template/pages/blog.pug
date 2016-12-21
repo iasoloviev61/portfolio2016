@@ -2,6 +2,8 @@ extends ../layout/main_layout.pug
 block title
 	title Блог
 block content
+	div.sidebar-fixed
+		a.sidebar-fixed__btn
 	section.welcome
 		include ../common/header
 		img(class="portfolio__header" src="assets/img/bg/portfolio_header.svg")
@@ -23,18 +25,20 @@ block content
 	section.blog
 		.blog-wrap
 			aside.sidebar
-				.sidebar-wrap
-					ul.sidebar__list
-						li.sidebar__item.sidebar__item-active
-							a.sidebar__link(href="#") Самое важное в Sass
-						li.sidebar__item
-							a.sidebar__link(href="#") Приёмы в вёрстке, без которых не обходится ни один сайт
-						li.sidebar__item
-							a.sidebar__link(href="#") Самый необходимый набор Gulp плагинов
-						li.sidebar__item
-							a.sidebar__link(href="#") Почему я выбрал PUG
+				.sidebar-wrap#sidebar-wrap
+					.sidebar__left
+						ul.sidebar__list
+							li.sidebar__item.sidebar__item-active
+								a.sidebar__link(href="#sassImportant") Самое важное в Sass
+							li.sidebar__item
+								a.sidebar__link(href="#hintOfFront") Приёмы в вёрстке, без которых не обходится ни один сайт
+							li.sidebar__item
+								a.sidebar__link(href="#gulp") Самый необходимый набор Gulp плагинов
+							li.sidebar__item
+								a.sidebar__link(href="#pug") Почему я выбрал PUG
+					.sidebar__right
 			section.blog-content
-				article.article
+				article.article#sassImportant
 					div.article__header Самое важное в SASS
 					div.article__date
 						time(datetime="7 ноября 2016") 7 ноября 2016
@@ -49,7 +53,7 @@ block content
 
 										//прочитать
 										alert($(document).data('prop').anything) // любой объект
-				article.article
+				article.article#hintOfFront
 					div.article__header Приёмы в вёрстке, без которых не обходится ни один сайт
 					div.article__date
 						time(datetime="7 ноября 2016") 7 ноября 2016
@@ -58,7 +62,7 @@ block content
 							Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
 						p.
 							Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
-				article.article
+				article.article#gulp
 					div.article__header Самый необходимый набор Gulp плагинов
 					div.article__date
 						time(datetime="7 ноября 2016") 7 ноября 2016
@@ -86,7 +90,7 @@ block content
 													.pipe($.browserSync.stream());
 												})
 											};
-				article.article
+				article.article#pug
 					div.article__header Почуму я выбрал PUG
 					div.article__date
 						time(datetime="7 ноября 2016") 7 ноября 2016

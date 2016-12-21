@@ -10,11 +10,17 @@
        flipper.init();
     }
 
-        if (window.location.pathname == '/my_work.html') {
+     if (window.location.pathname == '/my_work.html') {
 
         blur.init();
 
     }
+    if (window.location.pathname == '/blog.html') {
+
+        blogMenu.init();
+
+    }
+
 
     if (window.location.pathname == '/about.html') {
         skill.init();

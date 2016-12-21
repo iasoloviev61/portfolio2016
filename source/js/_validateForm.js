@@ -13,8 +13,8 @@ var validation = (function () {
     var _removeError = function () {
         console.log($(this));
       $(this).removeClass('has-error');
-        $(this).closest('.auth-form__login_error').removeClass('auth-form__login_error');
-        $(this).closest('.auth-form__password_error').removeClass('auth-form__password_error');
+      $(this).closest('.auth-form__login_error').removeClass('auth-form__login_error');
+      $(this).closest('.auth-form__password_error').removeClass('auth-form__password_error');
     };
     var _clearForm = function () {
        var form = $(this);
