@@ -8,9 +8,9 @@ var blogMenu = (function () {
 
        $(window).on('scroll', _fixedMenu);
        $(window).on('scroll', _scrollBlog);
+       $('.sidebar-fixed__btn').on('click', _copyFixedMenu);
        $('.sidebar__link').on('click', _anchorTrans);
-       $('.sidebar-fixed__btn').one('click', _copyFixedMenu);
-        $('.sidebar-fixed__btn').on('click', _showFixedMenu);
+       $(document).on('mouseup', _closeBlogMenu);
     };
     // фиксирование меню при прокрутке
     var _fixedMenu = function () {
@@ -69,21 +69,34 @@ var blogMenu = (function () {
         $('body, html').animate({
             scrollTop: top
         }, 600);
-        console.log(sibl);
+        console.log(el,parent);
     };
     var _copyFixedMenu = function (e) {
         e.preventDefault();
-        $("#sidebar-wrap").clone().appendTo(".sidebar-fixed");
+        var sidebarFixed = $('.sidebar-fixed'),
+            sidebarWrap = $("#sidebar-wrap");
+        sidebarFixed.toggleClass('sidebar-fixed_show');
+        if (sidebarFixed.hasClass('sidebar-fixed_show')) {
+            setTimeout(function () {
+                    sidebarWrap.clone().appendTo(sidebarFixed);
+                },
+                1000);
+        }
+        else {
+             sidebarWrap.remove("#sidebar-wrap");
+       }
+
     };
-    var _showFixedMenu = function (e) {
-        e.preventDefault();
-
-        $('.sidebar-fixed').toggleClass('sidebar-fixed_show');
-        // $('.sidebar-fixed').find('#sidebar-wrap').removeClass('sidebar-wrap_fixed');
+    var _closeBlogMenu = function (e) {
+        var sidebarFixed = $(".sidebar-fixed"),
+            sidebarWrap = sidebarFixed.find("#sidebar-wrap");
+        if (!sidebarFixed.is(e.target) // если клик был не по нашему блоку
+            && sidebarFixed.has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.sidebar-fixed').removeClass('sidebar-fixed_show'); // скрываем его
+            sidebarWrap.remove("#sidebar-wrap");
+        }
     };
-
-
-    //Возвращаем объект (публичные методы)
+     //Возвращаем объект (публичные методы)
     return {
         init: init
     };

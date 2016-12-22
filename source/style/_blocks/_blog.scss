@@ -91,6 +91,11 @@
       margin: 0 auto;
       padding-left: 0;
     }
+    @include tablets() {
+      width: 38%;
+      margin: 0 auto;
+      padding-left: 0;
+    }
   }
   & .sidebar__right {
     width: 65%;
@@ -129,28 +134,31 @@
   }
   @include phones() {
     &-active {
+      border-right: none;
       .sidebar__link {
         color: #fff;
         font-family: $rbold;
       }
     }
     &:hover {
+      border-right: none;
       .sidebar__link {
         color: #fff;
         font-family: $rbold;
+
       }
     }
   }
   @include tablets() {
     &-active {
-      border-right: 3px solid $green;
+      border-right: none;
       .sidebar__link {
         color: #fff;
         font-family: $rbold;
       }
     }
     &:hover {
-      border-right: 3px solid $green;
+      border-right: none;
       .sidebar__link {
         color: #fff;
         font-family: $rbold;
