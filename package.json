@@ -1,7 +1,8 @@
 {
-  "name": "loftschool-builder",
+  "name": "portfolio2016",
   "version": "1.0.0",
-  "author": "a.kalin",
+  "author": "Soloviev Igor",
+  "main": "main.js",
   "license": "ISC",
   "scripts": {
     "postinstall": "bower install"
