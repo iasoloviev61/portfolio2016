@@ -72,6 +72,7 @@
 .slider-decsription__title {
   font-size: 35px;
   max-width: 303px;
+  margin-bottom: 40px;
   &:before {
     top: 24%;
     left: -36px;
@@ -82,11 +83,13 @@
   }
   @include phones {
     font-size: 21px;
-    max-width: 170px;
+    max-width: 183px;
+    margin-bottom: 20px;
   }
   @include tablets {
-    font-size: 21px;
-    max-width: 170px;
+    //font-size: 21px;
+    //max-width: 170px;
+    margin-bottom: 20px;
   }
 }
 .slider-decsription__tech {
