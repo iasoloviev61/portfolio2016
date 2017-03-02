@@ -51,6 +51,8 @@
 }
 
 .arrow-dropdown__link {
+  z-index: 2;
+  cursor: pointer;
   position: absolute;
   display: inline-block;
   //bottom: 50px;

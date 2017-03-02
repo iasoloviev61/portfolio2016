@@ -14,5 +14,6 @@ module.exports = [
   './source/js/_validateForm.js',
   './source/js/_contactMe.js',
   './source/js/blog.js',
+  './source/js/scrollDown.js',
   './source/js/app.js'
 ];

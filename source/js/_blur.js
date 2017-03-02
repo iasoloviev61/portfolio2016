@@ -1,4 +1,4 @@
-var blur = (function () {
+var auth = (function () {
 
     function init() {
         _setUpListeners();
